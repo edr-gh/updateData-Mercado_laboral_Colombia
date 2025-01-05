@@ -179,23 +179,11 @@ Debemos descargar los siguientes anexos:
 Luego, debemos renombrarlos justo como la lista de arriba (ejemplo: si descargamos el anexo de "Empleo y desempleo" renombramos el archivo de Excel como "Empleo y desempleo") luego convertir esos archivos a libros de Google Sheets ya que originalmente vienen en formato de libro de Excel y eliminar los archivos de Excel (son los que terminan en "xlsx"). El link para acceder a esos anexos es el siguiente:
 [Mercado laboral](https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral).
 
-<figure>
-    <center>
-    <img src="./images/1.png">
-    <figurecaption>Figura 1: Cifras del mercado laboral. Fuente: DANE</figurecaption>
-    </center>
-</figure>
+![Figura 1: Cifras del mercado laboral. Fuente: DANE](./images/1.png)
 
 Cuando queramos convertir un archivo de Excel que tengamos en Drive a un archivo de Google Sheets, nos aparecerá la siguiente opción:
 
-<figure>
-    <center>
-    <img 
-        src="./images/2.png"
-        style="display:block; ">
-    <figurecaption>Figura 2: Convertir Excel a Google Sheets</figurecaption>
-    </center>
-</figure>
+![Figura 2: Convertir Excel a Google Sheets](./images/2.png)
 
 ### 3. Insertar el script
 
@@ -204,95 +192,46 @@ Para insertar el scritp se requiere hacer lo siguiente:
 1. Copiar el script. 
 2. Ingresar al archivo donde queremos colocar el script
 3. Ingresar a Apps Script, ingresando a "Extensiones -> Apps Script".
-<figure>
-    <center>
-    <img src="./images/3.png">
-    <figurecaption>Figura 3: Ubicación de Google Apps Script</figurecaption>
-    </center>
-</figure>
+
+![Figura 3: Ubicación de Google Apps Script](./images/3.png)
 
 1. Remplazamos lo que encontremos por el script
 
-<figure>
-    <center>
-    <img src="./images/4.png">
-    <figurecaption>Figura 4: Dentro de Google Apps Script</figurecaption>
-    </center>
-</figure>
+![Figura 4: Dentro de Google Apps Script](./images/4.png)
 
-<figure>
-    <center>
-    <img src="./images/5.png">
-    <figurecaption>Figura 5: Pegando el script</figurecaption>
-    </center>
-</figure>
+![Figura 5: Pegando el script](./images/5.png)
 
 1. Ejecutar el script: Cuando lo use por primera vez, le pedirá permisos de ejecución:
 
-<figure>
-    <center>
-    <img src="./images/6.png">
-    <figurecaption>Figura 6: Solicitud de permisos</figurecaption>
-    </center>
-</figure>
+![Figura 6: Solicitud de permisos](./images/6.png)
 
 Cuando vemoas el aviso anterior, damos click en "Revisar permisos" y nos pedirá iniciar sesión con Google:
 
-<figure>
-    <center>
-    <img src="./images/7.png">
-    <figurecaption>Figura 7: Selección de cuenta</figurecaption>
-    </center>
-</figure>
+![Figura 7: Selección de cuenta](./images/7.png)
 
 Seleccionamos una cuenta y nos aparecerá el siguiente aviso:
 
-<figure>
-    <center>
-    <img src="./images/8.png">
-    <figurecaption>Figura 8: Aviso de Google</figurecaption>
-    </center>
-</figure>
+![Figura 8: Aviso de Google](./images/8.png)
 
 En el aviso, Google nos dice que el script no ha sido verificado: No hay nada de que preocuparse, el script es de código abierto por lo cual es posible verificar todo lo que este hace.
 
 Para dar el permiso se debe dar click en "Configuración avanzada":
 
-<figure>
-    <center>
-    <img src="./images/9.png">
-    <figurecaption>Figura 9: Ir al script</figurecaption>
-    </center>
-</figure>
+![Figura 9: Ir al script](./images/9.png)
 
 Luego damos click donde dice "Ir a updateData 1.0" y nos aparecerá lo siguiente:
 
-<figure>
-    <center>
-    <img src="./images/10.png">
-    <figurecaption>Figura 10: Permitir el uso del script</figurecaption>
-    </center>
-</figure>
+![Figura 10: Permitir el uso del script](./images/10.png)
 
 Damos click en "Permitir" y se ejecutará el script así que nos devolvemos a nuestra hoja:
 
-<figure>
-    <center>
-    <img src="./images/11.png">
-    <figurecaption>Figura 11: Ejecución del script</figurecaption>
-    </center>
-</figure>
+![Figura 11: Ejecución del script](./images/11.png)
 
 Nos aparecerá un cuadro solicitando el año de los datos, cuando lo veamos por primera vez damos click en "Cancelar" debido a que no ha cargado aún el menu de actualización y recargamos la hoja.
 Una vez recargada  ya podremos ver el menu de "Actualizar datos del mercado laboral" y seremos libres
 de usar el script cuando lo queramos.
 
-<figure>
-    <center>
-    <img src="./images/12.png">
-    <figurecaption>Figura 12: Menu de updateData</figurecaption>
-    </center>
-</figure>
+![Figura 12: Menu de updateData](./images/12.png)
 
 ### 4. Explicación del menu de "updateData"
 El menu "updateData" tiene las siguientes cuatro opciones:
@@ -307,12 +246,7 @@ El menu "updateData" tiene las siguientes cuatro opciones:
 
 Cuando demos click en cualquiera de las opciones del menu, nos saldrá un cuadro solicitando el año de los datos, es decir, el año para el que corresponde la información publicada no el año actual. Ejemplo: Los datos del trimestre Oct-Dic de 2024 se publican en Enero de 2025, por tanto, se debe colocar el año 2024. Adicional, el año debe ser un digito de 4 caracteres.
 
-<figure>
-    <center>
-    <img src="./images/13.png">
-    <figurecaption>Figura 13: Input box- año de los datos</figurecaption>
-    </center>
-</figure>
+![Figura 13: Input box- año de los datos](./images/13.png)
 
 ## ¿Cómo funciona el script?
 
