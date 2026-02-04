@@ -10,7 +10,6 @@ function addYear(){
     if(year === "cancel"){
       return;
     }
-
     if(/^\d{4}$/g.test(year)){
       esValido = true
     }
@@ -282,6 +281,7 @@ function menuActualizarDatos(){
     .addItem("Actualizar datos sobre informalidad","updateInformalidad")
     .addItem("Actualizar datos sobre Mercado laboral de la Juventud","updateMonteriaJoven")
     .addItem("Actualizar datos sobre Mercado laboral según sexo","updateMonteriaSexo")
+    .addItem("Descargar archivos","descargarArchivos")
     .addToUi()
 }
 
