@@ -1,3 +1,26 @@
+function addYear(){
+      
+  let year
+  let esValido = false
+
+  while(!esValido){
+
+    year = Browser.inputBox("Año","Digite el año de los datos",Browser.Buttons.OK_CANCEL)
+
+    if(year === "cancel"){
+      return;
+    }
+
+    if(/^\d{4}$/g.test(year)){
+      esValido = true
+    }
+    else{
+      Browser.msgBox("Dato inválido","El dato ingresado no es un valor válido como año",Browser.Buttons.OK)
+    }
+  }
+}
+
+
 function updateMonteria() {
   
   // Declarar el libro destino
@@ -10,27 +33,7 @@ function updateMonteria() {
 
   // Declarar el año al que corresponden los datos
   
-    let year
-
-    let esValido = false
-
-    while(!esValido){
-
-      year = Browser.inputBox("Año","Digite el año de los datos",Browser.Buttons.OK_CANCEL)
-
-      if(year === "cancel"){
-        return;
-      }
-
-      if(/^\d{4}$/g.test(year)){
-        esValido = true
-      }
-
-      else{
-        Browser.msgBox("Dato inválido","El dato ingresado no es un valor válido como año",Browser.Buttons.OK)
-      }
-
-    }
+    addYear()
 
   // Declaramos las hojas destino en el libro destino
 
@@ -148,27 +151,7 @@ function updateInformalidad(){
   
   // Obtener el año en la hoja destino
 
-    let year
-    let esValido = false
-
-    while(!esValido){
-
-      year = Browser.inputBox("Año","Digite el año de los datos",Browser.Buttons.OK_CANCEL)
-
-      if(year==="cancel"){
-        return;
-      }
-
-      if(/^\d{4}$/g.test(year)){
-        esValido = true
-
-      }
-
-      else{
-          Browser.msgBox("Dato inválido","El dato ingresado no es un valor válido como año",Browser.Buttons.OK)
-      }
-
-    }
+    addYear()
 
     hojaFormalesEInformales.getRange(hojaFormalesEInformales.getLastRow()+1,1).setValue(year)
     hojaInformalidadMonteria.getRange(hojaInformalidadMonteria.getLastRow()+1,1).setValue(year)
@@ -214,28 +197,7 @@ function updateMonteriaJoven(){
 
   // Obtenemos el dato del año 
 
-    let year
-    let esValido = false
-
-    while(!esValido){
-      
-      year = Browser.inputBox("Año", "Inserte el año de los datos",Browser.Buttons.OK_CANCEL)
-
-      if(year==="cancel"){
-        return;
-      }
-
-      if(/^\d{4}$/g.test(year)){
-      esValido = true
-
-    }
-
-      else{
-        Browser.msgBox("Dato inválido","El dato digitado no es un valor válido como año",Browser.Buttons.OK)
-      }
-
-
-    }
+    addYear()
 
     hojaMonteriaJoven.getRange(hojaMonteriaJoven.getLastRow()+1,1).setValue(year)  
 
@@ -273,21 +235,7 @@ function updateMonteriaSexo(){
   
   // Obtener el año de los datos
 
-    let year
-    let esValido = false
-
-    while(!esValido){
-      year = Browser.inputBox("Año","Digite el año de los datos",Browser.Buttons.OK_CANCEL)
-      if(year==="cancel"){
-        return;
-      }
-      if(/^\d{4}$/g.test(year)){
-        esValido = true
-      }
-      else{
-        Browser.msgBox("Dato inválido","El dato ingresado no es un valor válido como año",Browser.Buttons.OK)
-      }
-    }
+    addYear()
 
   hojaMonteriaSexo.getRange(hojaMonteriaSexo.getLastRow()+1,1).setValue(year)
 
